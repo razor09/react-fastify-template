@@ -1,0 +1,7 @@
+manager/node_modules
+client/dist
+client/node_modules
+server/dist
+server/node_modules
+shared/dist
+shared/node_modules
