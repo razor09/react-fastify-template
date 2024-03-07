@@ -5,7 +5,7 @@
     "generate": "ts-node tools/codegen/generate.ts",
     "fetch": "rm -rf node_modules && npm ci",
     "update:soft": "ncu -u && npm install",
-    "update:hard": "ncu -u && rm -rf dist node_modules package-lock.json && npm install"
+    "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install"
   },
   "dependencies": {
     "@shared/libs": "../shared/dist/libs",
