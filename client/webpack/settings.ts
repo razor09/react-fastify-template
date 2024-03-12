@@ -1,6 +1,6 @@
-import { config } from '@shared/libs'
 import { ProxyConfigArray } from 'webpack-dev-server'
 import { apps } from '../../manager/config/ecosystem.json'
+import * as config from '../../manager/config/server.json'
 import { Args } from './typings'
 
 const [_, client] = apps

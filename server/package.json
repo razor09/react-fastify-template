@@ -1,16 +1,10 @@
 {
-  "type": "module",
   "scripts": {
     "start": "nodemon src/entry/main.ts",
-    "build": "rm -rf dist && tsc && tsc-alias",
+    "build": "rm -rf dist && tsc",
     "fetch": "rm -rf node_modules && npm ci",
     "update:soft": "ncu -u && npm install",
     "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install"
-  },
-  "nodemonConfig": {
-    "execMap": {
-      "ts": "node --import @shared/libs/esm.js"
-    }
   },
   "dependencies": {
     "@shared/libs": "../shared/dist/libs",

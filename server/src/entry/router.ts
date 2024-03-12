@@ -1,5 +1,3 @@
-import { FastifyInstance, HookHandlerDoneFunction, RouteShorthandOptions } from 'fastify'
+import { FastifyInstance } from 'fastify'
 
-export const router = (_: FastifyInstance, __: RouteShorthandOptions, done: HookHandlerDoneFunction): void => {
-  done()
-}
+export const router = async (_: FastifyInstance): Promise<void> => {}
