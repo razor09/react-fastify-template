@@ -14,7 +14,7 @@ play-server:
 	cd server && ${start}
 
 
-#Fetch, update client / server libraries, build client / server for production
+# Fetch, update client / server libraries, build client / server for production
 fetch:
 	cd shared && ${fetch} && cd ../client && ${fetch} && cd ../server && ${fetch} && cd ../manager && ${fetch}
 build:
