@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@types/node": "20.11.30",
-    "npm-check-updates": "16.14.17",
+    "npm-check-updates": "16.14.18",
     "prettier": "3.2.5",
-    "typescript": "5.4.2"
+    "typescript": "5.4.3"
   }
 }
