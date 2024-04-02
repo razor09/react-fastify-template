@@ -15,7 +15,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@types/node": "20.11.30",
+    "@types/node": "20.12.2",
     "npm-check-updates": "16.14.18",
     "prettier": "3.2.5",
     "typescript": "5.4.3"
