@@ -13,19 +13,19 @@ const prefix = config.prefix
 const proxyBaseUrl = prefix || '/'
 const href = origin.concat(prefix)
 
-export const isDevelopment = (args: Args): boolean => {
+export const getIsDevelopment = (args: Args): boolean => {
   return args.mode === 'development'
 }
 
-export const isProduction = (args: Args): boolean => {
+export const getIsProduction = (args: Args): boolean => {
   return args.mode === 'production'
 }
 
 export const getBaseUrl = (args: Args): string => {
-  return isDevelopment(args) ? prefix : href
+  return getIsDevelopment(args) ? prefix : href
 }
 
-export const proxyConfigArray: ProxyConfigArray = [
+export const proxy: ProxyConfigArray = [
   {
     context: proxyBaseUrl,
     target: origin.concat(proxyBaseUrl),

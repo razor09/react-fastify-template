@@ -5,12 +5,13 @@ import { resolve } from 'path'
 import * as TerserWebpackPlugin from 'terser-webpack-plugin'
 import { Configuration, DefinePlugin } from 'webpack'
 import 'webpack-dev-server'
-import * as settings from './settings'
+import { getBaseUrl, getIsDevelopment, getIsProduction, host, port, proxy } from './settings'
 import { Args } from './typings'
 
 export default (_: object, args: Args): Configuration => {
-  const isDevelopment = settings.isDevelopment(args)
-  const isProduction = settings.isProduction(args)
+  const isDevelopment = getIsDevelopment(args)
+  const isProduction = getIsProduction(args)
+  const baseUrl = getBaseUrl(args)
   return {
     entry: resolve('src/entry'),
     output: {
@@ -70,14 +71,14 @@ export default (_: object, args: Args): Configuration => {
     },
     devtool: isDevelopment ? 'source-map' : false,
     devServer: {
-      host: settings.host,
-      port: settings.port,
-      proxy: settings.proxyConfigArray,
+      host,
+      port,
+      proxy,
       historyApiFallback: true,
     },
     plugins: [
       new DefinePlugin({
-        baseUrl: `${settings.getBaseUrl(args)}`,
+        baseUrl: `${baseUrl}`,
       }),
       new MiniCssExtractPlugin({
         filename: '[fullhash].css',
