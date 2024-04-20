@@ -1,11 +1,11 @@
 {
   "apps": [
     {
-      "name": "task-tracker-server",
+      "name": "react-fastify-template-server",
       "script": "../server/dist/entry/main.js"
     },
     {
-      "name": "task-tracker-client",
+      "name": "react-fastify-template-client",
       "script": "serve",
       "env": {
         "PM2_SERVE_PATH": "../client/dist",
