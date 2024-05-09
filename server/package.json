@@ -9,11 +9,11 @@
   "dependencies": {
     "@shared/libs": "../shared/dist/libs",
     "@shared/models": "../shared/dist/models",
-    "fastify": "4.26.2"
+    "fastify": "4.27.0"
   },
   "devDependencies": {
     "@types/json-schema": "7.0.15",
-    "@types/node": "20.12.8",
+    "@types/node": "20.12.11",
     "nodemon": "3.1.0",
     "npm-check-updates": "16.14.20",
     "ts-node": "10.9.2",
