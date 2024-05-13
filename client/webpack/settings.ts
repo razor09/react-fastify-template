@@ -27,6 +27,6 @@ export const getBaseUrl = (args: Args): string => {
 export const proxy: ProxyConfigArray = [
   {
     context: baseUrl,
-    target: origin.concat(baseUrl),
+    target: href,
   },
 ]
