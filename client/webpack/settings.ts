@@ -9,9 +9,8 @@ export const host = client.env.PM2_SERVE_HOST
 export const port = client.env.PM2_SERVE_PORT
 
 const origin = `${config.protocol}://${config.host}:${config.port}`
-const prefix = config.prefix
-const proxyBaseUrl = prefix || '/'
-const href = origin.concat(prefix)
+const baseUrl = config.prefix
+const href = origin.concat(baseUrl)
 
 export const getIsDevelopment = (args: Args): boolean => {
   return args.mode === 'development'
@@ -22,12 +21,12 @@ export const getIsProduction = (args: Args): boolean => {
 }
 
 export const getBaseUrl = (args: Args): string => {
-  return getIsDevelopment(args) ? prefix : href
+  return getIsDevelopment(args) ? baseUrl : href
 }
 
 export const proxy: ProxyConfigArray = [
   {
-    context: proxyBaseUrl,
-    target: origin.concat(proxyBaseUrl),
+    context: baseUrl,
+    target: origin.concat(baseUrl),
   },
 ]
