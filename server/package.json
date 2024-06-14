@@ -9,7 +9,7 @@
   "dependencies": {
     "@shared/libs": "../shared/dist/libs",
     "@shared/models": "../shared/dist/models",
-    "fastify": "4.27.0"
+    "fastify": "4.28.0"
   },
   "devDependencies": {
     "@types/json-schema": "7.0.15",
