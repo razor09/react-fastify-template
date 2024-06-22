@@ -12,6 +12,6 @@
   },
   "devDependencies": {
     "npm-check-updates": "16.14.20",
-    "pm2": "5.4.0"
+    "pm2": "5.4.1"
   }
 }
