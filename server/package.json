@@ -13,10 +13,10 @@
   },
   "devDependencies": {
     "@types/json-schema": "7.0.15",
-    "@types/node": "20.14.10",
+    "@types/node": "22.5.0",
     "nodemon": "3.1.4",
-    "npm-check-updates": "16.14.20",
+    "npm-check-updates": "17.1.0",
     "ts-node": "10.9.2",
-    "typescript": "5.5.3"
+    "typescript": "5.5.4"
   }
 }
