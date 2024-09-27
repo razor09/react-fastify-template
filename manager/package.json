@@ -11,7 +11,7 @@
     "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install"
   },
   "devDependencies": {
-    "npm-check-updates": "17.1.1",
+    "npm-check-updates": "17.1.3",
     "pm2": "5.4.2"
   }
 }
