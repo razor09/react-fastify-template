@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "pm2 start config/ecosystem.json",
+    "stop": "pm2 stop config/ecosystem.json",
+    "restart": "pm2 restart config/ecosystem.json",
+    "reload": "pm2 reload config/ecosystem.json",
+    "delete": "pm2 delete config/ecosystem.json",
+    "kill": "pm2 kill",
+    "fetch": "rm -rf node_modules && npm ci",
+    "update:soft": "ncu -u && npm install",
+    "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install"
+  },
+  "devDependencies": {
+    "npm-check-updates": "17.1.4",
+    "pm2": "5.4.2"
+  }
+}

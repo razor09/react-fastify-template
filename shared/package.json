@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "fetch": "rm -rf node_modules && npm ci",
+    "lint": "prettier --config package.json --write ../**/*.{ts,tsx}",
+    "update:soft": "ncu -u && npm install",
+    "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install",
+    "postinstall": "npm run build",
+    "postbuild": "rm -rf dist/models/*.js"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.7",
+    "npm-check-updates": "17.1.4",
+    "prettier": "3.3.3",
+    "typescript": "5.6.3"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "react-fastify-template-server",
+      "script": "../server/dist/entry/main.js"
+    },
+    {
+      "name": "react-fastify-template-client",
+      "script": "serve",
+      "env": {
+        "PM2_SERVE_PATH": "../client/dist",
+        "PM2_SERVE_HOST": "localhost",
+        "PM2_SERVE_PORT": 4200,
+        "PM2_SERVE_SPA": true
+      }
+    }
+  ]
+}

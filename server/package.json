@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "nodemon src/entry/main.ts",
+    "build": "rm -rf dist && tsc",
+    "fetch": "rm -rf node_modules && npm ci",
+    "update:soft": "ncu -u && npm install",
+    "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install"
+  },
+  "dependencies": {
+    "@shared/libs": "../shared/dist/libs",
+    "@shared/models": "../shared/dist/models",
+    "fastify": "5.0.0"
+  },
+  "devDependencies": {
+    "@types/json-schema": "7.0.15",
+    "@types/node": "22.7.7",
+    "nodemon": "3.1.7",
+    "npm-check-updates": "17.1.4",
+    "ts-node": "10.9.2",
+    "typescript": "5.6.3"
+  }
+}
