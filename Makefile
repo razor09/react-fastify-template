@@ -5,6 +5,8 @@ fetch = npm run fetch
 update-soft = npm run update:soft
 update-hard = npm run update:hard
 clear = rm -rf client/dist client/node_modules server/dist server/node_modules shared/dist shared/node_modules manager/node_modules
+commit = git add --all && git commit -m 'update'
+push = git push origin master
 
 
 # Start client / server in development mode
@@ -40,8 +42,10 @@ kill:
 	cd manager && npm run kill
 
 
-# Lint code, clear dist and node modules everywhere
+# Lint code, commit changes, clear dist and node modules everywhere
 lint:
 	cd shared && ${lint}
+save:
+	cd shared && ${lint} && ${commit} && ${push}
 clear:
 	${clear}

@@ -78,7 +78,7 @@ export default (_: object, args: Args): Configuration => {
     },
     plugins: [
       new DefinePlugin({
-        baseUrl: `${baseUrl}`,
+        baseUrl: `'${baseUrl}'`,
       }),
       new MiniCssExtractPlugin({
         filename: '[fullhash].css',
